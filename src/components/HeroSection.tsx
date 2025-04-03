@@ -32,7 +32,7 @@ const HeroSection = () => {
         
         <AnimatedElement animation="fade-in" delay={500}>
           <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl leading-relaxed">
-            Full Stack Developer specializing in <span className="highlight">React.js</span>, <span className="highlight">Node.js</span>, and <span className="highlight">Data Visualization</span>
+            Full Stack Developer specializing in <span className="highlight">React.js</span>, <span className="highlight">Node.js</span>, <span className="highlight">FastAPI</span>, <span className="highlight">PostgreeSQL</span> and <span className="highlight">Data Visualization</span>
           </p>
         </AnimatedElement>
         
