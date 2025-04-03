@@ -55,7 +55,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         <a href="#home" className="text-2xl font-heading font-bold">
-          <span className="text-accent">Sethi</span> Narahari
+          <span className="text-accent">Sethi</span> Nagendra
         </a>
 
         {/* Desktop Navigation */}
@@ -76,7 +76,7 @@ const Navbar = () => {
             onClick={toggleDarkMode}
             aria-label="Toggle Dark Mode"
           >
-            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+            {isDarkMode ? <Moon size={20} /> : <Sun size={20} />}
           </Button>
         </nav>
 
