@@ -6,7 +6,13 @@ import ProjectCard from './ProjectCard';
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/3 left-1/3 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      </div>
+      
       <div className="container mx-auto px-4">
         <AnimatedElement>
           <SectionHeading>Projects</SectionHeading>

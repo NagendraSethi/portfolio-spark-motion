@@ -40,7 +40,13 @@ const SkillsSection = () => {
   ];
   
   return (
-    <section id="skills" className="section bg-secondary/30">
+    <section id="skills" className="section relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+      </div>
+      
       <div className="container mx-auto px-4">
         <AnimatedElement>
           <SectionHeading>Skills & Expertise</SectionHeading>
@@ -53,18 +59,18 @@ const SkillsSection = () => {
               animation="scale-in"
               delay={index * 100}
             >
-              <Card className="h-full border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-md">
+              <Card className="h-full border border-border/30 hover:border-accent/50 transition-all duration-300 hover:shadow-xl bg-card/50 backdrop-blur-sm hover:translate-y-[-5px]">
                 <CardContent className="p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-2 rounded-md bg-accent/10 text-accent">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="p-3 rounded-md bg-accent/10 text-accent">
                       {category.icon}
                     </div>
-                    <h3 className="text-xl font-semibold">{category.title}</h3>
+                    <h3 className="text-xl font-semibold text-primary">{category.title}</h3>
                   </div>
                   
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
-                      <span key={skill} className="tech-badge">
+                      <span key={skill} className="tech-badge bg-secondary/50 hover:bg-accent/20 hover:text-accent transition-colors">
                         {skill}
                       </span>
                     ))}

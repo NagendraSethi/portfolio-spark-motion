@@ -37,7 +37,7 @@ const AnimatedElement = ({
       },
       {
         threshold,
-        rootMargin: '0px',
+        rootMargin: '0px 0px -100px 0px', // Trigger slightly earlier for better UX
       }
     );
 
@@ -45,12 +45,31 @@ const AnimatedElement = ({
     return () => observer.disconnect();
   }, [once, threshold]);
 
+  const getAnimationClass = () => {
+    if (!isVisible) return "opacity-0";
+    
+    switch (animation) {
+      case 'fade-in':
+        return "animate-fade-in";
+      case 'slide-in-left':
+        return "animate-slide-in-left";
+      case 'slide-in-right':
+        return "animate-slide-in-right";
+      case 'slide-in-bottom':
+        return "animate-slide-in-bottom";
+      case 'scale-in':
+        return "animate-scale-in";
+      default:
+        return "animate-fade-in";
+    }
+  };
+
   return (
     <div
       ref={elementRef}
       className={cn(
         "transition-all duration-700",
-        isVisible ? `animate-${animation}` : "opacity-0",
+        getAnimationClass(),
         className
       )}
       style={{ 

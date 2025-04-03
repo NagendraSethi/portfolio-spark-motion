@@ -25,11 +25,11 @@ const ExperienceCard = ({
 }: ExperienceCardProps) => {
   return (
     <AnimatedElement animation="slide-in-bottom" delay={delay} className="h-full">
-      <Card className="h-full border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-md group">
-        <CardHeader>
-          <div className="flex justify-between items-start">
+      <Card className="h-full border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-xl group hover:translate-y-[-5px] bg-card/50 backdrop-blur-sm">
+        <CardHeader className="space-y-1">
+          <div className="flex justify-between items-start flex-wrap gap-2">
             <div>
-              <CardTitle className="text-xl mb-1">{title}</CardTitle>
+              <CardTitle className="text-xl mb-1 text-primary">{title}</CardTitle>
               <CardDescription className="text-base">
                 {link ? (
                   <a 
@@ -45,7 +45,7 @@ const ExperienceCard = ({
                 )}
               </CardDescription>
             </div>
-            <Badge variant="outline" className="text-xs font-normal">
+            <Badge variant="secondary" className="text-xs font-normal px-3 py-1">
               {duration}
             </Badge>
           </div>

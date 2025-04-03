@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Github, Mail, Linkedin, ArrowUp } from 'lucide-react';
+import { Button } from './ui/button';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,9 +14,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-secondary/80 py-8">
+    <footer className="py-10 border-t border-border/30 backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="mb-4 md:mb-0">
             <p className="text-foreground/70 text-sm">
               © {currentYear} Sethi Nagendrasundar Narahari. All rights reserved.
@@ -23,41 +24,61 @@ const Footer = () => {
           </div>
           
           <div className="flex space-x-4 items-center">
-            <a 
-              href="https://github.com/NagendraSethi" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-accent transition-colors"
-              aria-label="GitHub"
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="rounded-full hover:bg-accent/10 hover:text-accent"
+              asChild
             >
-              <Github size={18} />
-            </a>
+              <a 
+                href="https://github.com/NagendraSethi" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github size={18} />
+              </a>
+            </Button>
             
-            <a 
-              href="mailto:nagndra90@gmail.com" 
-              className="text-foreground/70 hover:text-accent transition-colors"
-              aria-label="Email"
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="rounded-full hover:bg-accent/10 hover:text-accent"
+              asChild
             >
-              <Mail size={18} />
-            </a>
+              <a 
+                href="mailto:nagndra90@gmail.com" 
+                aria-label="Email"
+              >
+                <Mail size={18} />
+              </a>
+            </Button>
             
-            <a 
-              href="https://linkedin.com/in/NagendraSethi" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-accent transition-colors"
-              aria-label="LinkedIn"
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="rounded-full hover:bg-accent/10 hover:text-accent"
+              asChild
             >
-              <Linkedin size={18} />
-            </a>
+              <a 
+                href="https://linkedin.com/in/NagendraSethi" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+            </Button>
             
-            <button 
+            <Button 
               onClick={scrollToTop}
-              className="ml-2 p-2 rounded-full bg-foreground/5 text-foreground/70 hover:text-accent hover:bg-foreground/10 transition-colors"
+              variant="outline"
+              size="icon"
+              className="ml-2 rounded-full"
               aria-label="Scroll to top"
             >
               <ArrowUp size={18} />
-            </button>
+            </Button>
           </div>
         </div>
       </div>
