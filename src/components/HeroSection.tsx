@@ -44,7 +44,7 @@ const HeroSection = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full px-6 font-medium text-base" asChild>
-              <a href="/lovable-uploads/02f01466-8913-46de-ad9d-6a2948ecc852.png" download="Nagendra_Resume.png">
+              <a href="public/Nagendra_NIT_surat_CV.pdf" download="public/Nagendra_NIT_surat_CV.pdf">
                 <Download className="mr-2" size={18} />
                 Download Resume
               </a>
