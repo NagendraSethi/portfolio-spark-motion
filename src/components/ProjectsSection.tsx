@@ -58,7 +58,7 @@ const ProjectsSection = () => {
             }
             technologies={["React.js", "Node.js", "Express.js", "MongoDB", "SCSS"]}
             githubLink="https://github.com/NagendraSethi/Brick-Finder-Web-App"
-            liveLink="https://brickfinder-demo.com"
+            // liveLink="https://brickfinder-demo.com"
             imageUrl="/placeholder.svg"
             delay={100}
           />
