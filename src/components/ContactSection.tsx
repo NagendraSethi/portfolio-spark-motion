@@ -52,14 +52,14 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      value: "nagndra90@gmail.com",
-      link: "mailto:nagndra90@gmail.com"
+      value: "sethinagendra43@gmail.com",
+      link: "mailto:sethinagendra43@gmail.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
       title: "Phone",
-      value: "+91 9712371380",
-      link: "tel:+919712371380"
+      value: "+91 9773141920",
+      link: "tel:+919773141920"
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
